@@ -1,5 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="wrapper">
+  <TopNav  />
 
-{{outlet}}
+  <SideNav />
+
+  <section class="content p-4 bg-gray-200">
+      {{outlet}}
+  </section>
+
+  <SideFilters />
+
+  <footer class="footer p-4 bg-gray-200">Footer</footer>
+</div>
