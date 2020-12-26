@@ -9,11 +9,6 @@ export default class RegistrationFormComponent extends Component {
   @tracked password;
   @tracked passwordConfirmation;
 
-  constructor() {
-    super(...arguments);
-    this.args.clearErrors;
-  }
-
   @action
   submitUser(ev) {
     ev.preventDefault();
@@ -24,8 +19,13 @@ export default class RegistrationFormComponent extends Component {
       password: this.password,
       passwordConfirmation: this.passwordConfirmation
     }) 
-  
-    
   }
 
+  @action
+  fireCancel() {
+    this.args.cancelForm();    
+  }
+
+    
 }
+
